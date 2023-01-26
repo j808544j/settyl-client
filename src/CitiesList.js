@@ -10,7 +10,9 @@ function CitiesList({ selectedCity, setSelectedCity }) {
   const [refetch, setRefetch] = useState(false);
 
   useEffect(() => {
-    fetch(`/weather?page=${selectedIndex}`)
+    fetch(
+      `https://settyl-server.onrender.com/weather/weather?page=${selectedIndex}`
+    )
       .then((res) => res.json())
       .then(
         (result) => {
